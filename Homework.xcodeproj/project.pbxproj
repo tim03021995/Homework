@@ -3,27 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FC53B70D256FE4F500185222 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B70C256FE4F500185222 /* AppDelegate.swift */; };
 		FC53B70F256FE4F500185222 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B70E256FE4F500185222 /* SceneDelegate.swift */; };
-		FC53B711256FE4F500185222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B710256FE4F500185222 /* ContentView.swift */; };
 		FC53B713256FE4F800185222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC53B712256FE4F800185222 /* Assets.xcassets */; };
 		FC53B716256FE4F800185222 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC53B715256FE4F800185222 /* Preview Assets.xcassets */; };
 		FC53B719256FE4F800185222 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC53B717256FE4F800185222 /* LaunchScreen.storyboard */; };
+		FC53B73C256FE7BD00185222 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC53B73B256FE7BD00185222 /* SnapKit */; };
+		FC53B740256FE86600185222 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = FC53B73F256FE86600185222 /* DynamicColor */; };
+		FC53B74A256FE95B00185222 /* checkBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B746256FE95B00185222 /* checkBox.swift */; };
+		FC53B74B256FE95B00185222 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B747256FE95B00185222 /* Button.swift */; };
+		FC53B74C256FE95B00185222 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B748256FE95B00185222 /* CustomTextField.swift */; };
+		FC53B74D256FE95B00185222 /* InputBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B749256FE95B00185222 /* InputBox.swift */; };
+		FC53B756256FE9E400185222 /* UIColor+ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B755256FE9E400185222 /* UIColor+ColorSet.swift */; };
+		FC53B75B256FEA1100185222 /* MidifyPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B758256FEA1000185222 /* MidifyPasswordVC.swift */; };
+		FC53B75C256FEA1100185222 /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B759256FEA1000185222 /* LoginPageVC.swift */; };
+		FC53B75D256FEA1100185222 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B75A256FEA1000185222 /* WelcomeVC.swift */; };
+		FC53B762256FEA3500185222 /* MidifyPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B75F256FEA3500185222 /* MidifyPasswordView.swift */; };
+		FC53B763256FEA3500185222 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B760256FEA3500185222 /* LoginPageView.swift */; };
+		FC53B764256FEA3500185222 /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B761256FEA3500185222 /* WelcomePageView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC53B767256FF23900185222 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC53B709256FE4F500185222 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC53B70C256FE4F500185222 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC53B70E256FE4F500185222 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC53B710256FE4F500185222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC53B712256FE4F800185222 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC53B715256FE4F800185222 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC53B718256FE4F800185222 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC53B71A256FE4F800185222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC53B746256FE95B00185222 /* checkBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
+		FC53B747256FE95B00185222 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		FC53B748256FE95B00185222 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FC53B749256FE95B00185222 /* InputBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBox.swift; sourceTree = "<group>"; };
+		FC53B755256FE9E400185222 /* UIColor+ColorSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorSet.swift"; sourceTree = "<group>"; };
+		FC53B758256FEA1000185222 /* MidifyPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidifyPasswordVC.swift; sourceTree = "<group>"; };
+		FC53B759256FEA1000185222 /* LoginPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
+		FC53B75A256FEA1000185222 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		FC53B75F256FEA3500185222 /* MidifyPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidifyPasswordView.swift; sourceTree = "<group>"; };
+		FC53B760256FEA3500185222 /* LoginPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
+		FC53B761256FEA3500185222 /* WelcomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC53B740256FE86600185222 /* DynamicColor in Frameworks */,
+				FC53B73C256FE7BD00185222 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +94,11 @@
 			children = (
 				FC53B70C256FE4F500185222 /* AppDelegate.swift */,
 				FC53B70E256FE4F500185222 /* SceneDelegate.swift */,
-				FC53B710256FE4F500185222 /* ContentView.swift */,
+				FC53B743256FE90600185222 /* Controllers */,
+				FC53B744256FE91900185222 /* Views */,
 				FC53B712256FE4F800185222 /* Assets.xcassets */,
 				FC53B717256FE4F800185222 /* LaunchScreen.storyboard */,
+				FC53B754256FE9E400185222 /* Extension  */,
 				FC53B71A256FE4F800185222 /* Info.plist */,
 				FC53B714256FE4F800185222 /* Preview Content */,
 			);
@@ -75,6 +113,46 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FC53B743256FE90600185222 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC53B759256FEA1000185222 /* LoginPageVC.swift */,
+				FC53B758256FEA1000185222 /* MidifyPasswordVC.swift */,
+				FC53B75A256FEA1000185222 /* WelcomeVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC53B744256FE91900185222 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC53B760256FEA3500185222 /* LoginPageView.swift */,
+				FC53B75F256FEA3500185222 /* MidifyPasswordView.swift */,
+				FC53B761256FEA3500185222 /* WelcomePageView.swift */,
+				FC53B745256FE92300185222 /* Elements */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC53B745256FE92300185222 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				FC53B747256FE95B00185222 /* Button.swift */,
+				FC53B746256FE95B00185222 /* checkBox.swift */,
+				FC53B748256FE95B00185222 /* CustomTextField.swift */,
+				FC53B749256FE95B00185222 /* InputBox.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		FC53B754256FE9E400185222 /* Extension  */ = {
+			isa = PBXGroup;
+			children = (
+				FC53B755256FE9E400185222 /* UIColor+ColorSet.swift */,
+			);
+			path = "Extension ";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,12 +163,18 @@
 				FC53B705256FE4F500185222 /* Sources */,
 				FC53B706256FE4F500185222 /* Frameworks */,
 				FC53B707256FE4F500185222 /* Resources */,
+				FC53B767256FF23900185222 /* CopyFiles */,
+				FC53B768256FF23D00185222 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Homework;
+			packageProductDependencies = (
+				FC53B73B256FE7BD00185222 /* SnapKit */,
+				FC53B73F256FE86600185222 /* DynamicColor */,
+			);
 			productName = Homework;
 			productReference = FC53B709256FE4F500185222 /* Homework.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +202,10 @@
 				Base,
 			);
 			mainGroup = FC53B700256FE4F500185222;
+			packageReferences = (
+				FC53B73A256FE7BD00185222 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FC53B73E256FE86600185222 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
 			productRefGroup = FC53B70A256FE4F500185222 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,14 +228,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FC53B768256FF23D00185222 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\nswiftformat .\nelse\necho \"warning: SwiftFormat not installed.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC53B705256FE4F500185222 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC53B70D256FE4F500185222 /* AppDelegate.swift in Sources */,
+				FC53B756256FE9E400185222 /* UIColor+ColorSet.swift in Sources */,
+				FC53B74A256FE95B00185222 /* checkBox.swift in Sources */,
+				FC53B74D256FE95B00185222 /* InputBox.swift in Sources */,
 				FC53B70F256FE4F500185222 /* SceneDelegate.swift in Sources */,
-				FC53B711256FE4F500185222 /* ContentView.swift in Sources */,
+				FC53B74B256FE95B00185222 /* Button.swift in Sources */,
+				FC53B762256FEA3500185222 /* MidifyPasswordView.swift in Sources */,
+				FC53B764256FEA3500185222 /* WelcomePageView.swift in Sources */,
+				FC53B75D256FEA1100185222 /* WelcomeVC.swift in Sources */,
+				FC53B74C256FE95B00185222 /* CustomTextField.swift in Sources */,
+				FC53B75B256FEA1100185222 /* MidifyPasswordVC.swift in Sources */,
+				FC53B75C256FEA1100185222 /* LoginPageVC.swift in Sources */,
+				FC53B763256FEA3500185222 /* LoginPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +463,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC53B73A256FE7BD00185222 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		FC53B73E256FE86600185222 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC53B73B256FE7BD00185222 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC53B73A256FE7BD00185222 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FC53B73F256FE86600185222 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC53B73E256FE86600185222 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC53B701256FE4F500185222 /* Project object */;
 }
