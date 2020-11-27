@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Open Camera</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Open Library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>OpenLibrary</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

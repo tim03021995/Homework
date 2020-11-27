@@ -25,6 +25,10 @@
 		FC53B762256FEA3500185222 /* MidifyPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B75F256FEA3500185222 /* MidifyPasswordView.swift */; };
 		FC53B763256FEA3500185222 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B760256FEA3500185222 /* LoginPageView.swift */; };
 		FC53B764256FEA3500185222 /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B761256FEA3500185222 /* WelcomePageView.swift */; };
+		FC53B76C256FF34100185222 /* TakeImagePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B76B256FF34100185222 /* TakeImagePageView.swift */; };
+		FC53B76F256FF36F00185222 /* TakeImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B76E256FF36F00185222 /* TakeImageController.swift */; };
+		FC53B7732570A4CE00185222 /* UIImage+resizeImage+addFrame+compressionQualityImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B7722570A4CD00185222 /* UIImage+resizeImage+addFrame+compressionQualityImage.swift */; };
+		FC53B77A2570ADDC00185222 /* FrameBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B7792570ADDC00185222 /* FrameBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +62,10 @@
 		FC53B75F256FEA3500185222 /* MidifyPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidifyPasswordView.swift; sourceTree = "<group>"; };
 		FC53B760256FEA3500185222 /* LoginPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		FC53B761256FEA3500185222 /* WelcomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
+		FC53B76B256FF34100185222 /* TakeImagePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeImagePageView.swift; sourceTree = "<group>"; };
+		FC53B76E256FF36F00185222 /* TakeImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeImageController.swift; sourceTree = "<group>"; };
+		FC53B7722570A4CD00185222 /* UIImage+resizeImage+addFrame+compressionQualityImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resizeImage+addFrame+compressionQualityImage.swift"; sourceTree = "<group>"; };
+		FC53B7792570ADDC00185222 /* FrameBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 				FC53B759256FEA1000185222 /* LoginPageVC.swift */,
 				FC53B758256FEA1000185222 /* MidifyPasswordVC.swift */,
 				FC53B75A256FEA1000185222 /* WelcomeVC.swift */,
+				FC53B76E256FF36F00185222 /* TakeImageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -126,9 +135,10 @@
 		FC53B744256FE91900185222 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC53B761256FEA3500185222 /* WelcomePageView.swift */,
+				FC53B76B256FF34100185222 /* TakeImagePageView.swift */,
 				FC53B760256FEA3500185222 /* LoginPageView.swift */,
 				FC53B75F256FEA3500185222 /* MidifyPasswordView.swift */,
-				FC53B761256FEA3500185222 /* WelcomePageView.swift */,
 				FC53B745256FE92300185222 /* Elements */,
 			);
 			path = Views;
@@ -141,6 +151,7 @@
 				FC53B746256FE95B00185222 /* checkBox.swift */,
 				FC53B748256FE95B00185222 /* CustomTextField.swift */,
 				FC53B749256FE95B00185222 /* InputBox.swift */,
+				FC53B7792570ADDC00185222 /* FrameBox.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				FC53B755256FE9E400185222 /* UIColor+ColorSet.swift */,
+				FC53B7722570A4CD00185222 /* UIImage+resizeImage+addFrame+compressionQualityImage.swift */,
 			);
 			path = "Extension ";
 			sourceTree = "<group>";
@@ -258,13 +270,17 @@
 				FC53B74A256FE95B00185222 /* checkBox.swift in Sources */,
 				FC53B74D256FE95B00185222 /* InputBox.swift in Sources */,
 				FC53B70F256FE4F500185222 /* SceneDelegate.swift in Sources */,
+				FC53B7732570A4CE00185222 /* UIImage+resizeImage+addFrame+compressionQualityImage.swift in Sources */,
 				FC53B74B256FE95B00185222 /* Button.swift in Sources */,
 				FC53B762256FEA3500185222 /* MidifyPasswordView.swift in Sources */,
 				FC53B764256FEA3500185222 /* WelcomePageView.swift in Sources */,
 				FC53B75D256FEA1100185222 /* WelcomeVC.swift in Sources */,
 				FC53B74C256FE95B00185222 /* CustomTextField.swift in Sources */,
+				FC53B76C256FF34100185222 /* TakeImagePageView.swift in Sources */,
 				FC53B75B256FEA1100185222 /* MidifyPasswordVC.swift in Sources */,
+				FC53B76F256FF36F00185222 /* TakeImageController.swift in Sources */,
 				FC53B75C256FEA1100185222 /* LoginPageVC.swift in Sources */,
+				FC53B77A2570ADDC00185222 /* FrameBox.swift in Sources */,
 				FC53B763256FEA3500185222 /* LoginPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,7 +429,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Homework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Homework.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -434,7 +450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Homework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Homework.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -14,6 +14,7 @@ class LoginPageView: UIView {
         label.text = "登入"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 24)
+        label.isUserInteractionEnabled = true
         return label
     }()
 
@@ -108,7 +109,7 @@ class LoginPageView: UIView {
     var checkBox: CheckBox = {
         var checkBox = CheckBox()
         checkBox.button.addTarget(self, action: #selector(LoginPageVC.tapCheckBox), for: .touchUpInside)
-        checkBox.button.isSelected = true
+        checkBox.button.isSelected = false
         return checkBox
     }()
 

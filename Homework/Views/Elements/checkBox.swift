@@ -13,6 +13,7 @@ class CheckBox: UIView {
         var button = UIButton()
         button.setImage(UIImage(named: "checkbox"), for: .normal)
         button.setImage(UIImage(named: "checkboxChecked"), for: .selected)
+        button.isUserInteractionEnabled = true
         return button
     }()
 
@@ -21,6 +22,7 @@ class CheckBox: UIView {
         label.text = "記住我"
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 14)
+        label.isUserInteractionEnabled = true
         return label
     }()
 
