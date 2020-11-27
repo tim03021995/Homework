@@ -38,6 +38,13 @@ class WelcomePageView: UIView {
         return button
     }()
 
+    var takeRequest: UIButton = {
+        var button = Button(buttonStyle: .fill)
+        button.setTitle("Request", for: .normal)
+        button.addTarget(nil, action: #selector(WelcomePageVC.tapRequestButton), for: .touchUpInside)
+        return button
+    }()
+
     var buttonOutline: UIButton = {
         var button = Button(buttonStyle: .outline)
         button.setTitle("還不是會員？前往註冊", for: .normal)
@@ -46,7 +53,7 @@ class WelcomePageView: UIView {
     }()
 
     lazy var stackView: UIStackView = {
-        let subviews = [loginButton, googleMapButton, takeImageButton, buttonOutline]
+        let subviews = [loginButton, googleMapButton, takeRequest, takeImageButton, buttonOutline]
         var stackView = UIStackView(arrangedSubviews: subviews)
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing

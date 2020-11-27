@@ -41,4 +41,11 @@ class WelcomePageVC: UIViewController {
         let vc = TakeImageController()
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    @objc func tapRequestButton() {
+        print(#function)
+//        let vc = RequestTestPageVC()
+        let vc = RequestTestPage()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
