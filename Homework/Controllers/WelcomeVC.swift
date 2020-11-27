@@ -14,6 +14,7 @@ class WelcomePageVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "test", style: .plain, target: self, action: #selector(backViewBtnFnc))
     }
 
     @objc func tapLoginButton() {
@@ -31,7 +32,13 @@ class WelcomePageVC: UIViewController {
         print(#function)
     }
 
+    @objc func backViewBtnFnc() {
+        navigationController?.popViewController(animated: true)
+    }
+
     @objc func tapTackImage() {
         print(#function)
+        let vc = TakeImageController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

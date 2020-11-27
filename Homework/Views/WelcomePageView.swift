@@ -72,10 +72,10 @@ class WelcomePageView: UIView {
             maker.height.equalTo(84)
         }
         stackView.snp.makeConstraints { maker in
-            maker.top.equalTo(logoImageView.snp.bottom).offset(200)
+            maker.top.equalTo(logoImageView.snp.bottom).offset(edgePaddingY)
             maker.leading.equalToSuperview().offset(edgePaddingY)
             maker.trailing.equalToSuperview().offset(-edgePaddingY)
-            maker.height.equalTo(200)
+            maker.bottom.equalTo(-100)
         }
     }
 
