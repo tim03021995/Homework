@@ -65,6 +65,7 @@ class LoginPageVC: UIViewController {
                 getMemberData()
             case false:
                 print("loginFail")
+                loginPageView.wrongLogin(text: "帳號或密碼錯誤")
             }
         }
         print(#function)

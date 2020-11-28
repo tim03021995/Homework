@@ -58,7 +58,7 @@ class InputBox: UIView {
     private func setConstraints() {
         addSubview(stackView)
         stackView.snp.makeConstraints { maker in
-            maker.top.leading.trailing.bottom.equalToSuperview()
+            maker.edges.equalToSuperview()
         }
         textField.snp.makeConstraints { maker in
             maker.height.equalTo(36)
@@ -67,7 +67,6 @@ class InputBox: UIView {
             maker.leading.trailing.bottom.equalToSuperview()
             maker.height.equalTo(1)
         }
-        textField.layoutIfNeeded()
     }
 
     func setStatus(status: Status) {

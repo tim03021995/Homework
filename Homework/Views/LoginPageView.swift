@@ -192,6 +192,16 @@ class LoginPageView: UIView {
         return passWordInputBox.textField.text ?? ""
     }
 
+    func wrongLogin(text: String) {
+        accountInputBox.setStatus(status: .waring)
+        accountInputBox.textField.warningButton.isHidden = false
+        passWordInputBox.setStatus(status: .waring)
+        passWordInputBox.textField.warningButton.isHidden = false
+        passWordInputBox.promptLabel.text = text
+        accountInputBox.textField.layoutSubviews()
+        passWordInputBox.textField.layoutSubviews()
+    }
+
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
