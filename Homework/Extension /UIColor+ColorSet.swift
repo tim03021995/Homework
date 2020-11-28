@@ -28,7 +28,7 @@ extension UIColor {
     /// 小標題
     static var title2Color = #colorLiteral(red: 0.2666336298, green: 0.2666856647, blue: 0.2666303515, alpha: 1)
     /// 內文
-    static var textColor = #colorLiteral(red: 0.3999532461, green: 0.4000268579, blue: 0.3999486566, alpha: 1)
+    static var textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     /// 日期，輔助文字，虛線
     static var subtextColor = #colorLiteral(red: 0.7763852477, green: 0.7765197158, blue: 0.7763767838, alpha: 1)
     /// 標籤文字

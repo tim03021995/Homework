@@ -20,7 +20,7 @@ class WelcomePageVC: UIViewController {
     @objc func tapLoginButton() {
         print(#function)
         let vc = LoginPageVC()
-        vc.modalPresentationStyle = .overFullScreen
+        // vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
     }
 

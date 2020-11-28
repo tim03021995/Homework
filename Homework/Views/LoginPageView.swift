@@ -66,8 +66,7 @@ class LoginPageView: UIView {
         var inputBox = InputBox()
         inputBox.label.text = "帳號"
         inputBox.textField.placeholder = "帳號"
-        inputBox.textField.isSecureTextEntry = true
-
+        inputBox.textField.text = "ccwork"
         return inputBox
     }()
 
@@ -75,6 +74,7 @@ class LoginPageView: UIView {
         var inputBox = InputBox()
         inputBox.label.text = "密碼"
         inputBox.textField.placeholder = "密碼"
+        inputBox.textField.text = "ccwork"
         inputBox.textField.eyesButton.isHidden = false
         inputBox.textField.isSecureTextEntry = true
         inputBox.textField.eyesButton.addTarget(nil, action: #selector(LoginPageVC.tapPasswordEyeBtn), for: .touchUpInside)
@@ -182,6 +182,14 @@ class LoginPageView: UIView {
             maker.leading.equalTo(edgePaddingX)
             maker.trailing.equalTo(-edgePaddingX)
         }
+    }
+
+    func getAccount() -> String {
+        return accountInputBox.textField.text ?? ""
+    }
+
+    func getPassword() -> String {
+        return passWordInputBox.textField.text ?? ""
     }
 
     @available(*, unavailable)

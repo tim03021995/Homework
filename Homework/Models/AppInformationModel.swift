@@ -7,20 +7,6 @@
 
 import Foundation
 
-// MARK: - AccountModel
-
-struct Account: Codable {
-    let id, name: String
-    let attack, defense: Int
-
-    enum CodingKeys: String, CodingKey {
-        case id = "ID"
-        case name = "Name"
-        case attack = "Attack"
-        case defense = "Defense"
-    }
-}
-
 // MARK: - NetWorking
 
 struct HTTPRequest {
@@ -34,8 +20,8 @@ struct HTTPRequest {
 
     func request<T: Codable>(completionHandler: @escaping (Result<T, NetworkError>) -> Void) {
         let sessionConfig = URLSessionConfiguration.default
-        sessionConfig.timeoutIntervalForRequest = 10
-        sessionConfig.timeoutIntervalForResource = 10
+        sessionConfig.timeoutIntervalForRequest = 20
+        sessionConfig.timeoutIntervalForResource = 20
         let session = URLSession(configuration: sessionConfig)
         let task = session.dataTask(with: request!) { data, response, error in
             DispatchQueue.main.async {
@@ -51,8 +37,10 @@ struct HTTPRequest {
                     completionHandler(.failure(.nilData))
                     return
                 }
+
                 switch response.statusCode {
                 case 200:
+                    // print(data)
                     decodeData(data: data, complitionHandler: completionHandler)
                 default:
                     decodeData(data: data) { (res: Result<ErrorMessage, NetworkError>) in
@@ -60,7 +48,7 @@ struct HTTPRequest {
                         case let .success(data):
                             completionHandler(.failure(.invalidResponse(data)))
                         case .failure:
-                            completionHandler(.failure(.invalidJSONDecoder))
+                            completionHandler(.failure(._invalidJSONDecoder))
                         }
                     }
                 }
@@ -69,47 +57,27 @@ struct HTTPRequest {
         task.resume()
     }
 
-    init(method: Method, host: Host, pathType: PathType, headers: [String: String]? = nil, parameters: [String: Any]? = nil) {
+    init(method: Method, host: Host, pathType: PathType, token: String? = nil, parameters: [String: Any]? = nil) {
         var urlComponents = URLComponents()
         urlComponents.host = host.str
         urlComponents.scheme = Schme.http.str
         urlComponents.path = pathType.str
 
-        if host == .demo {
-            let url = URL(string: urlComponents.url!.absoluteString + ".htm")
-            var urlRequest = URLRequest(url: url!)
-            urlRequest.httpMethod = method.rawValue
-            if let headers = headers {
-                urlRequest.allHTTPHeaderFields = headers
-            }
-            if let parameters = parameters {
-                urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions())
-            }
-            request = urlRequest
-        } else {
-            var urlRequest = URLRequest(url: urlComponents.url!)
-            urlRequest.httpMethod = method.rawValue
-            if let headers = headers {
-                urlRequest.allHTTPHeaderFields = headers
-            }
-            if let parameters = parameters {
-                urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions())
-            }
-            request = urlRequest
+        var urlRequest = URLRequest(url: urlComponents.url!)
+        urlRequest.httpMethod = method.rawValue
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        if let token = token {
+            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
-    }
-
-    private func makeURL(schme: Schme, host: Host, pathType: PathType) -> URL {
-        var urlComponents = URLComponents()
-        urlComponents.host = host.str
-        urlComponents.scheme = schme.str
-        urlComponents.path = pathType.str
-        if host == .demo {
-            let url = URL(string: urlComponents.url!.absoluteString + ".htm")
-            return url!
+        if let parameters = parameters {
+            do {
+                urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to nsdata object and set it as request body
+            } catch {
+                print(error.localizedDescription)
+            }
         }
-        let url = urlComponents.url
-        return url!
+        request = urlRequest
     }
 
     enum PathType {
@@ -119,9 +87,9 @@ struct HTTPRequest {
         var str: String {
             switch self {
             case let .demo(endPoint):
-                return "/files/appexam/\(endPoint.rawValue)"
+                return "/files/appexam/\(endPoint.rawValue).htm"
             case let .webdemo(endPoint):
-                return "/AppTest/\(endPoint.rawValue)"
+                return "/AppTest/api/\(endPoint.rawValue)"
             }
         }
 
@@ -168,7 +136,7 @@ struct HTTPRequest {
             let data = try decoder.decode(T.self, from: data)
             complitionHandler(.success(data))
         } catch {
-            complitionHandler(.failure(.invalidJSONDecoder))
+            complitionHandler(.failure(.invalidJSONDecoder(error)))
         }
     }
 }
@@ -178,7 +146,8 @@ enum NetworkError: Error {
     case requestFailed(Error)
     case invalidData
     case invalidResponse(ErrorMessage)
-    case invalidJSONDecoder
+    case invalidJSONDecoder(Error)
+    case _invalidJSONDecoder
     case tokenError
     case nilData
     case nonHTTPResponse
@@ -221,4 +190,12 @@ struct Message: Codable {
 
 enum ResultCellType: String {
     case banner, employee
+}
+
+private func printJSON(metadata: Any) {
+    let jsonData = try! JSONSerialization.data(withJSONObject: metadata)
+    // Convert to a string and print
+    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+        print(JSONString)
+    }
 }

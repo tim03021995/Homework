@@ -36,6 +36,12 @@
 		FC53B78B2570EDAC00185222 /* RequestTestPage2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B78A2570EDAC00185222 /* RequestTestPage2VC.swift */; };
 		FC53B78F2570EE3300185222 /* RequestTestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B78E2570EE3300185222 /* RequestTestPage.swift */; };
 		FC53B7922570EE5D00185222 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53B7912570EE5D00185222 /* Cell.swift */; };
+		FCE3A62C257142E600692627 /* String+3DES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3A62B257142E600692627 /* String+3DES.swift */; };
+		FCE3A62F257148C400692627 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3A62E257148C400692627 /* AccountModel.swift */; };
+		FCE3A63225715EF200692627 /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3A63125715EF200692627 /* LoginPageModel.swift */; };
+		FCE3A6352571894900692627 /* MemberDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3A6342571894900692627 /* MemberDataVC.swift */; };
+		FCE3A6382571896B00692627 /* MemberDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3A6372571896B00692627 /* MemberDataView.swift */; };
+		FCE3A63D2571F51100692627 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FCE3A63C2571F51100692627 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +87,11 @@
 		FC53B78E2570EE3300185222 /* RequestTestPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTestPage.swift; sourceTree = "<group>"; };
 		FC53B7912570EE5D00185222 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		FCE3A62225712D0700692627 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		FCE3A62B257142E600692627 /* String+3DES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+3DES.swift"; sourceTree = "<group>"; };
+		FCE3A62E257148C400692627 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		FCE3A63125715EF200692627 /* LoginPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
+		FCE3A6342571894900692627 /* MemberDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDataVC.swift; sourceTree = "<group>"; };
+		FCE3A6372571896B00692627 /* MemberDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE3A63D2571F51100692627 /* Kingfisher in Frameworks */,
 				FC53B740256FE86600185222 /* DynamicColor in Frameworks */,
 				FC53B73C256FE7BD00185222 /* SnapKit in Frameworks */,
 			);
@@ -124,6 +136,7 @@
 				FC53B717256FE4F800185222 /* LaunchScreen.storyboard */,
 				FC53B754256FE9E400185222 /* Extension  */,
 				FC53B71A256FE4F800185222 /* Info.plist */,
+				FCE3A62225712D0700692627 /* Header.h */,
 				FC53B714256FE4F800185222 /* Preview Content */,
 			);
 			path = Homework;
@@ -140,6 +153,7 @@
 		FC53B743256FE90600185222 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCE3A6342571894900692627 /* MemberDataVC.swift */,
 				FC53B759256FEA1000185222 /* LoginPageVC.swift */,
 				FC53B758256FEA1000185222 /* MidifyPasswordVC.swift */,
 				FC53B75A256FEA1000185222 /* WelcomeVC.swift */,
@@ -159,6 +173,7 @@
 				FC53B760256FEA3500185222 /* LoginPageView.swift */,
 				FC53B75F256FEA3500185222 /* MidifyPasswordView.swift */,
 				FC53B7872570ED9300185222 /* RequestTestPageView.swift */,
+				FCE3A6372571896B00692627 /* MemberDataView.swift */,
 				FC53B745256FE92300185222 /* Elements */,
 			);
 			path = Views;
@@ -181,7 +196,7 @@
 			children = (
 				FC53B755256FE9E400185222 /* UIColor+ColorSet.swift */,
 				FC53B7722570A4CD00185222 /* UIImage+resizeImage+addFrame+compressionQualityImage.swift */,
-				FCE3A62225712D0700692627 /* Header.h */,
+				FCE3A62B257142E600692627 /* String+3DES.swift */,
 			);
 			path = "Extension ";
 			sourceTree = "<group>";
@@ -190,8 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				FC53B7802570E47900185222 /* AppInformationModel.swift */,
+				FCE3A62E257148C400692627 /* AccountModel.swift */,
 				FC53B7812570E47900185222 /* MainVC+UserDefaults.swift */,
 				FC53B7822570E47900185222 /* URL+withQueries.swift */,
+				FCE3A63125715EF200692627 /* LoginPageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +242,7 @@
 			packageProductDependencies = (
 				FC53B73B256FE7BD00185222 /* SnapKit */,
 				FC53B73F256FE86600185222 /* DynamicColor */,
+				FCE3A63C2571F51100692627 /* Kingfisher */,
 			);
 			productName = Homework;
 			productReference = FC53B709256FE4F500185222 /* Homework.app */;
@@ -256,6 +274,7 @@
 			packageReferences = (
 				FC53B73A256FE7BD00185222 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				FC53B73E256FE86600185222 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+				FCE3A63B2571F51100692627 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FC53B70A256FE4F500185222 /* Products */;
 			projectDirPath = "";
@@ -304,10 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE3A62C257142E600692627 /* String+3DES.swift in Sources */,
 				FC53B78F2570EE3300185222 /* RequestTestPage.swift in Sources */,
 				FC53B7882570ED9300185222 /* RequestTestPageView.swift in Sources */,
 				FC53B7832570E47900185222 /* AppInformationModel.swift in Sources */,
+				FCE3A6382571896B00692627 /* MemberDataView.swift in Sources */,
 				FC53B70D256FE4F500185222 /* AppDelegate.swift in Sources */,
+				FCE3A62F257148C400692627 /* AccountModel.swift in Sources */,
 				FC53B756256FE9E400185222 /* UIColor+ColorSet.swift in Sources */,
 				FC53B7922570EE5D00185222 /* Cell.swift in Sources */,
 				FC53B74A256FE95B00185222 /* checkBox.swift in Sources */,
@@ -318,7 +340,9 @@
 				FC53B7842570E47900185222 /* MainVC+UserDefaults.swift in Sources */,
 				FC53B762256FEA3500185222 /* MidifyPasswordView.swift in Sources */,
 				FC53B764256FEA3500185222 /* WelcomePageView.swift in Sources */,
+				FCE3A6352571894900692627 /* MemberDataVC.swift in Sources */,
 				FC53B75D256FEA1100185222 /* WelcomeVC.swift in Sources */,
+				FCE3A63225715EF200692627 /* LoginPageModel.swift in Sources */,
 				FC53B74C256FE95B00185222 /* CustomTextField.swift in Sources */,
 				FC53B76C256FF34100185222 /* TakeImagePageView.swift in Sources */,
 				FC53B75B256FEA1100185222 /* MidifyPasswordVC.swift in Sources */,
@@ -477,6 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Homework.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/goodideas-studio/Desktop/Homework/Homework/Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,6 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Homework.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/goodideas-studio/Desktop/Homework/Homework/Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -543,6 +569,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		FCE3A63B2571F51100692627 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -555,6 +589,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FC53B73E256FE86600185222 /* XCRemoteSwiftPackageReference "DynamicColor" */;
 			productName = DynamicColor;
+		};
+		FCE3A63C2571F51100692627 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCE3A63B2571F51100692627 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

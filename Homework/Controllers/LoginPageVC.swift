@@ -9,8 +9,14 @@ import UIKit
 
 class LoginPageVC: UIViewController {
     var loginPageView = LoginPageView()
+    var loginPageModel = LoginPageModel()
     override func loadView() {
         view = loginPageView
+        loginPageModel.getToken { success in
+            if success {
+                print("getToken!!")
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -50,6 +56,35 @@ class LoginPageVC: UIViewController {
     }
 
     @objc func taploginBtn() {
+        let account = loginPageView.getAccount()
+        let password = loginPageView.getPassword()
+        loginPageModel.memberLogin(account: account, password: password) { [self] succes in
+            switch succes {
+            case true:
+                print("loginSuccess")
+                getMemberData()
+            case false:
+                print("loginFail")
+            }
+        }
         print(#function)
+    }
+
+    func getMemberData() {
+        print(#function)
+        loginPageModel.getMemberData { (res: Result<MemberDataModel, NetworkError>) in
+            switch res {
+            case let .success(data):
+                if data.success {
+                    let vc = MemberDataVC()
+                    vc.memberData = data.member
+                    self.show(vc, sender: nil)
+                } else {
+                    print(data.message)
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
 }
